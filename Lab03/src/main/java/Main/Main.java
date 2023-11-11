@@ -1,6 +1,6 @@
 package Main;
 
-import Main.Service.ShoppingCart;
+import Main.Cart.ShoppingCart;
 import Main.model.DVD;
 
 import javax.swing.*;
