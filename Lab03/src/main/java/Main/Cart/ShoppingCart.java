@@ -1,8 +1,12 @@
+package Main.Cart;
+
+import Main.model.DVD;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-class ShoppingCart {
+public class ShoppingCart {
     private List<DVD> items = new ArrayList<>();
 
     public void addItem(DVD dvd) {
@@ -14,9 +18,14 @@ class ShoppingCart {
     }
 
     public void displayCart() {
+        double totalCost=0;
+        System.out.println("\n"+"******************************************FB88******************************************"+"\n");
         for (DVD item : items) {
-            System.out.println(item);
+            System.out.println(item.toString());
+            totalCost=totalCost+item.getCost();
         }
+        System.out.println("Total cost: "+ totalCost);
+        System.out.println("\n"+"******************************************FB88******************************************"+"\n");
     }
 
     public void sortByName() {
