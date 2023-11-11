@@ -27,4 +27,7 @@ class ShoppingCart {
         items.sort(Comparator.comparing(Cart::getCost).reversed().thenComparing(Cart::getTitle));
     }
 
+    public void addDigitalVideoDisc(Cart []listCart){
+        items.addAll(List.of(listCart));
+    }
 }
