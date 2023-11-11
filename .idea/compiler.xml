@@ -9,8 +9,13 @@
         <module name="Lab03" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Lab03" target="11" />
+    <bytecodeTargetLevel target="11">
+      <module name="Lab03" target="17" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Lab03" options="" />
+    </option>
   </component>
 </project>
