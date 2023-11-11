@@ -1,3 +1,5 @@
+package Main.model;
+
 public class DVD {
     private int id;
     private String title;
@@ -45,7 +47,7 @@ public class DVD {
     public double getCost() {
         return cost;
     }
-    // Getter và setter cho thuộc tính DVD
+    // Getter và setter cho thuộc tính store.DVD
 
 
     public void setId(int id) {

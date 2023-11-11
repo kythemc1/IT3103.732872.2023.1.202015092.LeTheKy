@@ -1,3 +1,6 @@
+package Main;
+
+import Main.model.DVD;
 
 public class TestPassingParameter {
     public static void main(String []args){

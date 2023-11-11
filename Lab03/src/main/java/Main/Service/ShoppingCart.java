@@ -1,8 +1,12 @@
+package Main.Service;
+
+import Main.model.DVD;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-class ShoppingCart {
+public class ShoppingCart {
     private List<DVD> items = new ArrayList<>();
 
     public void addItem(DVD dvd) {

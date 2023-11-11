@@ -1,3 +1,8 @@
+package Main;
+
+import Main.Service.ShoppingCart;
+import Main.model.DVD;
+
 import javax.swing.*;
 
 public class Main {
@@ -19,9 +24,9 @@ public class Main {
 
         while (true) {
             System.out.println("AIMS Project Menu:");
-            System.out.println("1. View all DVD");
-            System.out.println("2. Sort all DVD by name");
-            System.out.println("3. Sort all DVD by cost");
+            System.out.println("1. View all store.DVD");
+            System.out.println("2. Sort all store.DVD by name");
+            System.out.println("3. Sort all store.DVD by cost");
             System.out.println("4. remove dvd from card ");
             System.out.println("0. Exit");
             System.out.print("Please select an option: ");
