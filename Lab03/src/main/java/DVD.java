@@ -6,7 +6,10 @@ public class DVD {
     private double length;
     private double cost;
 
-    public DVD(int id, String title, String category, String director, double length, double cost) {
+    private static int nbDigitalVideoDiscs = 0;
+
+
+    public DVD(int id, String title, String category, String director, double length, double cost,int nbDigitalVideoDiscs) {
         this.id = id;
         this.title = title;
         this.category = category;
@@ -73,5 +76,8 @@ public class DVD {
         return "ID: " + id + ", Title: " + title + ", Category: " + category + ", Director: " + director +
                 ", Length: " + length + ", Cost: " + cost;
     }
+
+
+
 }
 
