@@ -1,4 +1,4 @@
-public class Cart {
+public class DVD {
     private int id;
     private String title;
     private String category;
@@ -6,13 +6,17 @@ public class Cart {
     private double length;
     private double cost;
 
-    public Cart(int id, String title, String category, String director, double length, double cost) {
+    public DVD(int id, String title, String category, String director, double length, double cost) {
         this.id = id;
         this.title = title;
         this.category = category;
         this.director = director;
         this.length = length;
         this.cost = cost;
+    }
+
+    public DVD( String title) {
+        this.title = title;
     }
 
     public int getId() {

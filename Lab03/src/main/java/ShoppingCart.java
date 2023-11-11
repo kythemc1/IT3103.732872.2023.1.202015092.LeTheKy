@@ -3,9 +3,9 @@ import java.util.Comparator;
 import java.util.List;
 
 class ShoppingCart {
-    private List<Cart> items = new ArrayList<>();
+    private List<DVD> items = new ArrayList<>();
 
-    public void addItem(Cart dvd) {
+    public void addItem(DVD dvd) {
         items.add(dvd);
     }
 
@@ -14,20 +14,20 @@ class ShoppingCart {
     }
 
     public void displayCart() {
-        for (Cart item : items) {
+        for (DVD item : items) {
             System.out.println(item);
         }
     }
 
     public void sortByName() {
-        items.sort(Comparator.comparing(Cart::getTitle).thenComparing(Cart::getCost));
+        items.sort(Comparator.comparing(DVD::getTitle).thenComparing(DVD::getCost));
     }
 
     public void sortByCost() {
-        items.sort(Comparator.comparing(Cart::getCost).reversed().thenComparing(Cart::getTitle));
+        items.sort(Comparator.comparing(DVD::getCost).reversed().thenComparing(DVD::getTitle));
     }
 
-    public void addDigitalVideoDisc(Cart []listCart){
+    public void addDigitalVideoDisc(DVD []listCart){
         items.addAll(List.of(listCart));
     }
 }

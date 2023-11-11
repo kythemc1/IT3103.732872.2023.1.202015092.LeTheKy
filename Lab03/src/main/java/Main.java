@@ -2,11 +2,11 @@ import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
-        Cart dvd1 = new Cart(1, "đá", "Action", "Director 1", 120.5, 15.99);
-        Cart dvd2 = new Cart(2, "xc", "Comedy", "Director 2", 105.0, 12.99);
-        Cart dvd3 = new Cart(3, "sldk", "drama", "Director 2", 106.0, 12.99);
-        Cart dvd4 = new Cart(4, "dee", "anime", "Director 2", 105.0, 12.99);
-        Cart dvd5 = new Cart(5, "dvsdd5", "anime", "Director 2", 105.0, 12.99);
+        DVD dvd1 = new DVD(1, "đá", "Action", "Director 1", 120.5, 15.99);
+        DVD dvd2 = new DVD(2, "xc", "Comedy", "Director 2", 105.0, 12.99);
+        DVD dvd3 = new DVD(3, "sldk", "drama", "Director 2", 106.0, 12.99);
+        DVD dvd4 = new DVD(4, "dee", "anime", "Director 2", 105.0, 12.99);
+        DVD dvd5 = new DVD(5, "dvsdd5", "anime", "Director 2", 105.0, 12.99);
 
 
         ShoppingCart cartTotal = new ShoppingCart();
