@@ -1,65 +1,27 @@
 package Main.model;
 
-public class DVD {
-    private int id;
-    private String title;
-    private String category;
+public class DVD extends Media implements Playable{
     private String director;
     private double length;
-    private double cost;
 
-    private static int nbDigitalVideoDiscs = 0;
+    private static final int nbDigitalVideoDiscs = 0;
 
 
-    public DVD(int id, String title, String category, String director, double length, double cost,int nbDigitalVideoDiscs) {
-        this.id = id;
-        this.title = title;
-        this.category = category;
+    public DVD(int id, String title, String category, String director, double length, float cost,int nbDigitalVideoDiscs) {
+        super(id, title, category, cost);
         this.director = director;
         this.length = length;
-        this.cost = cost;
     }
 
     public DVD( String title) {
-        this.title = title;
+        super(title);
     }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
     public String getDirector() {
         return director;
     }
 
     public double getLength() {
         return length;
-    }
-
-    public double getCost() {
-        return cost;
-    }
-    // Getter và setter cho thuộc tính store.DVD
-
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
     }
 
     public void setDirector(String director) {
@@ -70,16 +32,23 @@ public class DVD {
         this.length = length;
     }
 
-    public void setCost(double cost) {
-        this.cost = cost;
-    }
-
+    @Override
     public String toString() {
-        return "ID: " + id + ", Title: " + title + ", Category: " + category + ", Director: " + director +
-                ", Length: " + length + ", Cost: " + cost;
+        return "DigitalVideoDisc{" +
+                "id=" + getId() +
+                ", title='" + getTitle() + '\'' +
+                ", category='" + getCategory() + '\'' +
+                ", director='" + director + '\'' +
+                ", length=" + length +
+                ", cost=" + getCost() +
+                '}';
     }
 
 
-
+    @Override
+    public void play() {
+        System.out.println("Playing DVD: " + this.getTitle());
+        System.out.println("DVD length: " + this.getLength());
+    }
 }
 
