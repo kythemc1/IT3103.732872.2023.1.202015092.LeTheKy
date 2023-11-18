@@ -43,7 +43,7 @@ public class Main {
                     updateStore(store, scanner);
                     break;
                 case 3:
-                    seeCurrentCart(cart, scanner);
+                    seeCurrentCart(cart);
                     break;
                 case 0:
                     System.out.println("Exiting AIMS. Goodbye!");
@@ -56,9 +56,6 @@ public class Main {
         scanner.close();
     }
 
-    private static void seeCurrentCart(ShoppingCart cart, Scanner scanner) {
-        cart.displayCart();
-    }
 
     private static void updateStore(Store store, Scanner scanner) {
     }
@@ -77,7 +74,6 @@ public class Main {
     public static void viewStore(Store store, ShoppingCart cart, Scanner scanner) {
         // Display items in the store
         store.displayCart();
-
         int choice;
         do {
             storeMenu();
@@ -95,7 +91,7 @@ public class Main {
                     playMedia(store, scanner);
                     break;
                 case 4:
-                    seeCurrentCart(cart, scanner);
+                    seeCurrentCart(cart);
                     break;
                 case 0:
                     System.out.println("Returning to main menu.");
@@ -187,6 +183,72 @@ public class Main {
         } else {
             System.out.println("Media not found or cannot play this type of media.");
         }
+    }
+
+    public static void seeCurrentCart(ShoppingCart cart) {
+        System.out.println("Options: ");
+        System.out.println("--------------------------------");
+        System.out.println("1. Filter medias in cart");
+        System.out.println("2. Sort medias in cart");
+//        System.out.println("3. Remove media from cart");
+//        System.out.println("4. Play a media");
+//        System.out.println("5. Place order");
+//        System.out.println("6. See current cart"); // Option to see current cart details
+        System.out.println("0. Back");
+        System.out.println("--------------------------------");
+        System.out.println("Please choose a number: 0-1-2-3-4-5-6");
+
+        int choice = getChoice(); // Assume you have a method to get user input
+
+        switch (choice) {
+            case 1: {
+                cart.sortByCost();
+                cart.displayCart();
+            }
+                break;
+            case 2:
+                cart.sortByName();
+                cart.displayCart();
+                break;
+            case 3: {
+//                cart.removeItem();
+            }
+                break;
+            case 4:
+//                playMedia(store, scanner);
+                break;
+            case 5:
+                // Handle place order option
+                break;
+            case 6:
+                handleSeeCurrentCartOption(cart);
+                break;
+            case 0:
+                // Handle back option
+                break;
+            default:
+                System.out.println("Invalid choice. Please choose a valid option.");
+                seeCurrentCart(cart); // Show the menu again
+                break;
+        }
+    }
+
+    private static void handleSeeCurrentCartOption(ShoppingCart cart) {
+        // Implement logic to see the current cart
+        System.out.println("Current Cart:");
+
+        // Assuming you have a method to display items in the cart
+        cart.displayCart();
+
+        seeCurrentCart(cart); // Go back to the cart menu
+    }
+
+    private static int getChoice() {
+        // Implement logic to get user input and return the choice
+        // Example: use Scanner to get user input
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your choice: ");
+        return scanner.nextInt();
     }
 }
 
