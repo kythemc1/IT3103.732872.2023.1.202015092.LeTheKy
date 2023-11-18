@@ -30,4 +30,12 @@ public class Store {
         System.out.println("Total cost: "+ totalCost);
         System.out.println("\n"+"******************************************FB88******************************************"+"\n");
     }
+    public Media findByTitle(String title) {
+        for (Media media : items) {
+            if (media.getTitle().equalsIgnoreCase(title)) {
+                return media;
+            }
+        }
+        return null; // If not found
+    }
 }

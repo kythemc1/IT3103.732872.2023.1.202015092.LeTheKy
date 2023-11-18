@@ -62,4 +62,12 @@ public abstract class Media {
         Media media = (Media) obj;
         return Objects.equals(title, media.title);
     }
+    public void displayInfo() {
+        System.out.println("Media Information:");
+        System.out.println("ID: " + id);
+        System.out.println("Title: " + title);
+        System.out.println("Category: " + category);
+        System.out.println("Cost: " + cost);
+    }
+
 }
