@@ -20,8 +20,7 @@ public class Main {
         store.addItem(dvd1);
         store.addItem(dvd2);
         store.addItem(dvd4);
-        store.addItem(dvd51
-        );
+        store.addItem(dvd5);
         store.addItem(dvd6);
 
 
