@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gui.javafx.PainterController">
+    <padding>
+        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+    </padding>
+    <left>
+        <VBox maxHeight="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0" spacing="8.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+            </BorderPane.margin>
+            <children>
+                <TitledPane animated="false" prefHeight="102.0" prefWidth="100.0" text="Tools">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="98.0">
+                            <children>
+                                <RadioButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Pen">
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="Tools" />
+                                    </toggleGroup>
+                                    <padding>
+                                        <Insets bottom="8.0" left="8.0" right="8.0" top="12.0" />
+                                    </padding>
+                                </RadioButton>
+                                <RadioButton layoutY="38.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Eraser" toggleGroup="$Tools">
+                                    <padding>
+                                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                    </padding>
+                                </RadioButton>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </TitledPane>
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clearButtonPressed" text="Clear" />
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <Pane fx:id="drawingAreaPane" maxWidth="1.7976931348623157E308" onMouseDragged="#drawingAreaMouseDragged" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </Pane>
+    </center>
+</BorderPane>
