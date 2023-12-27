@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="500.0" maxWidth="600.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.aimsproject.screen.AddMediaController">
+    <children>
+        <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+            <padding>
+                <Insets bottom="10.0" top="10.0" />
+            </padding>
+            <children>
+                <Label text="Select media type">
+                    <padding>
+                        <Insets bottom="4.0" left="8.0" right="8.0" top="4.0" />
+                    </padding>
+                </Label>
+                <RadioButton fx:id="radioBtnDVD" mnemonicParsing="false" onAction="#dvdSelected" selected="true" text="DVD">
+                    <padding>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                    </padding>
+                    <toggleGroup>
+                        <ToggleGroup fx:id="mediaType" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="radioBtnCD" mnemonicParsing="false" onAction="#cdSelected" text="CD" toggleGroup="$mediaType">
+                    <padding>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                    </padding>
+                </RadioButton>
+                <RadioButton fx:id="radioBtnBook" layoutX="194.0" layoutY="20.0" mnemonicParsing="false" onAction="#bookSelected" text="Book" toggleGroup="$mediaType">
+                    <padding>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                    </padding>
+                </RadioButton>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER">
+            <children>
+                <Label contentDisplay="RIGHT" minWidth="100.0" prefWidth="100.0" text="Title">
+                    <padding>
+                        <Insets bottom="4.0" left="8.0" right="8.0" top="4.0" />
+                    </padding>
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </Label>
+                <TextField fx:id="tfTitle" />
+            </children>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </HBox>
+        <HBox alignment="CENTER" layoutX="10.0" layoutY="55.0">
+            <children>
+                <Label contentDisplay="RIGHT" minWidth="100.0" prefWidth="100.0" text="Category">
+                    <padding>
+                        <Insets bottom="4.0" left="8.0" right="8.0" top="4.0" />
+                    </padding>
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </Label>
+                <TextField fx:id="tfCategory" />
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </HBox>
+        <HBox alignment="CENTER" layoutX="10.0" layoutY="350.0">
+            <children>
+                <Label minWidth="100.0" text="Director">
+                    <padding>
+                        <Insets bottom="4.0" left="8.0" right="8.0" top="4.0" />
+                    </padding>
+                </Label>
+                <TextField fx:id="tfDirector" />
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </HBox>
+        <HBox alignment="CENTER" layoutX="10.0" layoutY="359.0">
+            <children>
+                <Label minWidth="100.0" text="Length">
+                    <padding>
+                        <Insets bottom="4.0" left="8.0" right="8.0" top="4.0" />
+                    </padding>
+                </Label>
+                <TextField fx:id="tfLength" />
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </HBox>
+        <HBox alignment="CENTER" layoutX="10.0" layoutY="365.0">
+            <children>
+                <Label minWidth="100.0" text="Cost">
+                    <padding>
+                        <Insets bottom="4.0" left="8.0" right="8.0" top="4.0" />
+                    </padding>
+                </Label>
+                <TextField fx:id="tfCost" />
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </HBox>
+        <Pane maxHeight="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT">
+            <children>
+                <Button fx:id="createBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#createBtnPressed" text="Create">
+                    <padding>
+                        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                    </padding>
+                </Button>
+            </children>
+            <VBox.margin>
+                <Insets right="20.0" />
+            </VBox.margin>
+        </Pane>
+    </children>
+</VBox>
